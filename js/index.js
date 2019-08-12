@@ -1,11 +1,5 @@
-$().ready(function(){
-    var h=$(window).height();
-    
-    $(window).scroll(function(){
-        $('.header .box').click(function(){
-            $('html').stop().animate({scrollTop:752},500);
-            
-        });
+$(document).ready(function(){
+    $('.header .enter_wrap').click(function(){
+        $.fn.fullpage.moveSectionDown();
     });
-    
 });
