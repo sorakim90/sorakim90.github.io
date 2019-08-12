@@ -60,6 +60,11 @@ $(document).ready(function(){
         lazyLoading: true,
         onLeave:function(index, nextIndex, direction){
             console.log(index, nextIndex, direction)
+            if(nextIndex==2){
+                $('.content_1').addClass('start_ani');
+            }else{
+                $('.content_1').removeClass('start_ani');
+            }
         }
     });
 });
