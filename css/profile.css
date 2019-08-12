@@ -7,18 +7,60 @@ body{font-family:'나눔고딕';}
 .inner_section{width:100%;}
 
 .header{width:100%; height:752px; position:relative;}
-.header .img{width:100%; height:100%;}
-.header .m_img{width:100%; height:100%; display:none;}
+.header .bg_wrap{width:100%; height:100%; position: relative; background-color:#0e71b4;}
+.header .pc_bg{position: absolute; width:100%; height:100%;}
+.header .bg1{top:0; left:0; animation:bg1_ani 5s;}
+.header .bg2{top:0; left:0; animation:bg2_ani 5s;}
+.header .bg3{right:0; top:0; animation:bg3_ani 5s;}
+.header .bg4{top:0; left:0; animation:bg4_ani 5s;}
+.header .bg5{bottom:0; left:0; animation:bg5_ani 5s;}
+
+.header .m_bg_wrap{width:100%; height:100%; display:none; background-color:#0e71b4;}
+.header .m_bg{position: absolute; width:100%; height:100%;}
+.header .m_bg_wrap .bg1{top:0; left:0; animation:bg1_ani 5s;}
+.header .m_bg_wrap .bg2{top:0; left:0; animation:bg2_ani 5s;}
+.header .m_bg_wrap .bg3{right:0; top:0; animation:bg3_ani 5s;}
+.header .m_bg_wrap .bg4{top:0; left:0; animation:bg4_ani 5s;}
+.header .m_bg_wrap .bg5{bottom:0; left:0; animation:bg5_ani 5s;}
+
 .header h1{position:absolute; top:26%; left:9%; font-size:14vw; color:white;text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000; font-style:italic; transform:rotate(-11deg);}
 .header .box{position:absolute; top:54%; right:20%; width:230px; height:70px; background-color:white; border:1px solid black; font-size:20px; line-height:70px;}
 .header .back{top:55%; right:19.5%;}
 .header .font{border-bottom:1px solid black; margin-left: 40px;}
 .header .front:hover{top:55%; right:19.5%;}
 .header .box_img{width:20px; padding-left:50px;}
+.header .txt_wrap{animation:bg4_ani 5s;}
+
+@keyframes bg1_ani{
+    0%{top:-100%;}
+    20%{top:0;}
+    100%{top:0;}
+}
+@keyframes bg2_ani{
+    0%{left:-100%;}
+    40%{left:0;}
+    100%{left:0;}
+}
+@keyframes bg3_ani{
+    0%{right:-100%;}
+    60%{right:0;}
+    100%{right:0;}
+}
+@keyframes bg4_ani{
+    0%{opacity:0;}
+    60%{opacity:0;}
+    80%{opacity:1;}
+    100%{opacity:1;}
+}
+@keyframes bg5_ani{
+    0%{bottom:-100%;}
+    70%{bottom:0;}
+    100%{bottom:0;}
+}
 
 @media only screen and (max-width:1000px){
-    .header .img{display:none;}
-    .header .m_img{display:block;}
+    .header .bg_wrap{display:none;}
+    .header .m_bg_wrap{display:block;}
     .header h1{top:36%;}
     .header .box{width:180px; height:64px;right:5.5%; font-size:18px; line-height:63px}
     .header .back{right:4.5%;}
