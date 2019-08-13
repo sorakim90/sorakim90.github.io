@@ -65,11 +65,6 @@ $(document).ready(function(){
             }else{
                 $('.content_1').removeClass('start_ani');
             }
-            $('.header .enter_wrap').click(function(){
-                $.fn.fullpage.moveSectionDown();
-            });
-            
         }
-        
     });
 });
